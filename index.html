@@ -21,58 +21,66 @@
     <main>
         <section>
             <h2>C02-Austoß</h2>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-            <p><button id="myButton1" onclick="sortTable(0, 'myButton1')">Sortieren nach Unternehmen</button></p>
-            <p><button id="myButton2" onclick="sortTable(1, 'myButton2')">Sortieren nach Land</button></p>
-            <p><button id="myButton3" onclick="sortTable(2, 'myButton3')">Sortieren nach C02-Austoß</button></p>
-            
+            <p>In der folgenden Tabelle aufgeführt sind die Energieunternehmen mit der größten CO2-Emission in Millionen Tonnen. Quelle: https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Kohlenstoffdioxidemittenten#Nach_Energieunternehmen</p>
+            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names..">
+
             <table id="myTable">
-                <tr>
-                  <th>Unternehmen</th>
-                  <th>Land</th>
-                  <th>C02-Austoß</th>
+                <tr class="header">
+                  <th>Unternehmen <button class="sortButton" id="myButton1" onclick="sortTable(0, 'myButton1')"></button></th>
+                  <th>Land <button class="sortButton" id="myButton2" onclick="sortTable(1, 'myButton2')"></button></th>
+                  <th>C02-Austoß <button class="sortButton" id="myButton3" onclick="sortTable(2, 'myButton3')"></button></th>
                 </tr>
                 <tr>
-                  <td>Berglunds snabbkop</td>
-                  <td>Sweden</td>
-                  <td>300</td>
+                  <td>Huaneng Power International</td>
+                  <td>Volksrepublik China</td>
+                  <td>416990</td>
                 </tr>
                 <tr>
-                  <td>North/South</td>
-                  <td>UK</td>
-                  <td>100</td>
+                  <td>Datang International Power</td>
+                  <td>Volksrepublik China</td>
+                  <td>325680</td>
                 </tr>
                 <tr>
-                  <td>Alfreds Futterkiste</td>
-                  <td>Germany</td>
-                  <td>200</td>
+                  <td>China Guodian Corporation</td>
+                  <td>Volksrepublik China</td>
+                  <td>312980</td>
                 </tr>
                 <tr>
-                  <td>Koniglich Essen</td>
-                  <td>Germany</td>
-                  <td>200</td>
+                  <td>China Huadian Corporation</td>
+                  <td>Volksrepublik China</td>
+                  <td>306940</td>
                 </tr>
                 <tr>
-                  <td>Magazzini Alimentari Riuniti</td>
-                  <td>Italy</td>
-                  <td>200</td>
+                  <td>Eskom</td>
+                  <td>Südafrika</td>
+                  <td>210910</td>
                 </tr>
                 <tr>
-                  <td>Paris specialites</td>
-                  <td>France</td>
-                  <td>200</td>
+                  <td>National Thermal Power Corporation</td>
+                  <td>Indien</td>
+                  <td>191860</td>
                 </tr>
                 <tr>
-                  <td>Island Trading</td>
-                  <td>UK</td>
-                  <td>200</td>
+                  <td>China Power Investment Corporation</td>
+                  <td>Volksrepublik China</td>
+                  <td>167630</td>
                 </tr>
                 <tr>
-                  <td>Laughing Bacchus Winecellars</td>
-                  <td>Canada</td>
-                  <td>200</td>
+                  <td>Southern Company</td>
+                  <td>Vereinigte Staaten</td>
+                  <td>145140</td>
                 </tr>
-              </table>    
+                <tr>
+                  <td>American Electric Power</td>
+                  <td>Vereinigte Staaten</td>
+                  <td>128620</td>
+                </tr>
+                <tr>
+                  <td>E.ON</td>
+                  <td>Deutschland</td>
+                  <td>120280</td>
+                </tr>
+            </table>    
         </section>
     </main>
 

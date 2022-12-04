@@ -3,14 +3,13 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     margin:5px;
-    background-image: linear-gradient(315deg, var(--akzentfarbe5) 0%, var(--akzentfarbe4) 90%);
-    background-repeat: no-repeat;
+    background-image: url("./../images/tree.png");
+    background-size: cover;
     min-height: 100vh;
 }
 :root{
     --akzentfarbe1: rgb(0, 0, 0);
-    --akzentfarbe2: rgb(17, 238, 17);
-    --akzentfarbe3: rgb(1, 71, 221);
+    --akzentfarbe2: rgba(17, 238, 17, 0.7);
     --akzentfarbe4: rgb(255, 255, 255);
     --akzentfarbe5: rgb(82, 81, 81);
 }
@@ -177,66 +176,53 @@ h3{
     }
 }
 
-.anreise{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-
-
 
 /* footer */
-footer{
-    position: sticky; 
-        left:0;
-        bottom: 0;   
-        width: 100%;
-}
 .footer {
     background-color: var(--akzentfarbe2);
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
     width: 100%;
     position: relative;
     bottom: 0;
     vertical-align: baseline;
     margin-top: 20px;
-    
 }
 .footersection{
-    padding: 1rem;
-    width: auto;
+    padding: 1rem 5rem 0.5rem 5rem;
     text-align: center;
-    }
-.footersection p{
+}
+.footersection p, a{
     color: var(--akzentfarbe4);
-    margin: 0;
     font-size: 0.8rem;
     transition: 0.2s ease-in;
-    }
-.footersection a{
-        color: var(--akzentfarbe4);
-        margin: 0;
-        font-size: 0.8rem;
-        transition: 0.2s ease-in;
-    }
+}
 .footersection a:hover{
-        color: var(--akzentfarbe3);
-        }
+        color: var(--akzentfarbe1);
+}
 /* Footer Ende */
 
 
 
+/* SortButton */
+.sortButton{
+    background-image: url('./../images/sortIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+    border: 1 px solid black;
+}
+/* SortButton Ende*/
 
 
 
 
-/*https://www.w3schools.com/howto/howto_js_filter_table.asp */
+
+
+
+/* Table with sort und search function support by 
+https://www.w3schools.com/howto/howto_js_filter_table.asp */
 
 #myInput {
     background-image: url('images/searchicon.png'); /* Add a search icon to input */
@@ -254,6 +240,7 @@ footer{
     width: 100%; /* Full-width */
     border: 1px solid #ddd; /* Add a grey border */
     font-size: 18px; /* Increase font-size */
+    background-color: rgba(180, 196, 182, 0.5);
   }
   
   #myTable th, #myTable td {
@@ -268,5 +255,5 @@ footer{
   
   #myTable tr.header, #myTable tr:hover {
     /* Add a grey background color to the table header and on hover */
-    background-color: #f1f1f1;
+    background-color: var(--akzentfarbe2);
   }
