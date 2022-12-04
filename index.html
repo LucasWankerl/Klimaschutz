@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Klimaschutz</title>
     <script src="js/jq.js"></script>
     <script src="js/js.js"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -22,7 +22,9 @@
         <section>
             <h2>C02-Austoß</h2>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-            <p><button onclick="sortTable()">Sort</button></p>
+            <p><button id="myButton1" onclick="sortTable(0, 'myButton1')">Sortieren nach Unternehmen</button></p>
+            <p><button id="myButton2" onclick="sortTable(1, 'myButton2')">Sortieren nach Land</button></p>
+            <p><button id="myButton3" onclick="sortTable(2, 'myButton3')">Sortieren nach C02-Austoß</button></p>
             
             <table id="myTable">
                 <tr>
