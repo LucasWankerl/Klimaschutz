@@ -11,24 +11,27 @@
 
 
   <body>
-    <!-- Header -->
     <header> 
+      <!-- Header outsourced into header.html and loaded via jq.js-->
         <div id="header-placeholder"></div>
             <script>$(function(){$("#header-placeholder").load("header.html");});</script>
     </header>
-    <!-- Header Ende-->
-
+    
     <main>
         <section>
-            <h2>C02-Austoß</h2>
-            <p>In der folgenden Tabelle aufgeführt sind die Energieunternehmen mit der größten CO2-Emission in Millionen Tonnen. Quelle: https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Kohlenstoffdioxidemittenten#Nach_Energieunternehmen</p>
-            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names..">
+            <h2>Die größten CO&#8322-Emittenten der Energiebranche</h2>
+            
+            <p>In der folgenden Tabelle sind die Energieunternehmen mit der größten CO&#8322-Emission (in Millionen Tonnen) aufgeführt.<br> <a href="https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Kohlenstoffdioxidemittenten#Nach_Energieunternehmen">Quelle: Wikipedia 2022</a></p>
+            
+            <div class="center">
+              <input class="tableSearch" type="text" id="myInput" onkeyup="searchTable()" placeholder="Search Table">
+            </div>
 
             <table id="myTable">
                 <tr class="header">
                   <th>Unternehmen <button class="sortButton" id="myButton1" onclick="sortTable(0, 'myButton1')"></button></th>
                   <th>Land <button class="sortButton" id="myButton2" onclick="sortTable(1, 'myButton2')"></button></th>
-                  <th>C02-Austoß <button class="sortButton" id="myButton3" onclick="sortTable(2, 'myButton3')"></button></th>
+                  <th>C02-Emission <button class="sortButton" id="myButton3" onclick="sortTable(2, 'myButton3')"></button></th>
                 </tr>
                 <tr>
                   <td>Huaneng Power International</td>
@@ -88,14 +91,11 @@
 
 
 
-    <!-- Footer -->
     <footer> 
+      <!-- Footer outsourced into footer.html and loaded via jq.js-->
         <div id="footer-placeholder"></div>
             <script>$(function(){$("#footer-placeholder").load("footer.html");});</script>
     </footer>
-    <!-- Header Ende-->
-
-
-  
+    
   </body>
 </html>

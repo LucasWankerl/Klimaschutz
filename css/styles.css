@@ -1,40 +1,77 @@
-/* header */
+/* Allgemein */
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     margin:5px;
     background-image: url("./../images/tree.png");
-    background-size: cover;
-    min-height: 100vh;
-}
-:root{
-    --akzentfarbe1: rgb(0, 0, 0);
-    --akzentfarbe2: rgba(17, 238, 17, 0.7);
-    --akzentfarbe4: rgb(255, 255, 255);
-    --akzentfarbe5: rgb(82, 81, 81);
+    background-size:cover;
 }
 p, article{
     margin-left: 2rem;
     margin-right: 2rem;
-}
-a{
     color: var(--akzentfarbe1);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+}
+a:hover{
+    color: var(--akzentfarbe1);
+    text-decoration: underline;
+    transition: 0.3s ease-in;
+}
+.block{
+    display: block;
+}
+.center{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-self: center;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    gap:0.2rem;
+}
+h2{
+    width: 99%;
+    padding:1rem 0rem;
+    text-align: center;
+}
+
+
+/* set Design-colors for website */
+:root{
+    --akzentfarbe1: rgb(0, 0, 0);
+    --akzentfarbe2: rgba(17, 238, 17, 0.7);
+    --akzentfarbe3: rgb(17, 238, 17);
+    --akzentfarbe4: rgb(255, 255, 255);
+    --akzentfarbe5: rgb(82, 81, 81);
+}
+
+/* Header-elements*/
+.unternehmen {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .logo {
     width: 4rem;
     margin: 0.5rem;
+    border-radius: 100%;
 }
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--akzentfarbe2);
-}
-.logoname{
+.unternehmenName{
     text-decoration: none;
     color: var(--akzentfarbe2);
 }
 .menuicon{
-    width: 2rem;
+    width: 1.5rem;
     position: fixed;
     top: 2rem;
     right: 1rem;
@@ -43,17 +80,7 @@ h1 {
     z-index: 99999999;
 }
 .menuicon:hover{
-    background-color: var(--akzentfarbe2);
-    border-radius: 30%;
-    padding: 0.5rem;
-    transform: translate(.5rem,-.5rem)
-    
-}
-.unternehmen {
-    display: flex;
-    align-items: center;
-    background-color: rgba(0,0,0,0.0);
-    width: 100%;
+    transform:scale(2)
 }
 .top-header{
     display: flex;
@@ -66,7 +93,7 @@ nav{
 }
 nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 nav li{
@@ -80,27 +107,21 @@ nav li a{
     font-size: 1.2rem;
 }
 
-a:hover{
-    color: var(--akzentfarbe3);
-    text-decoration: underline;
-    transition: 0.3s ease-in;
-}
-
-@media screen and (max-width:900px){
-    
+/* Responsive Website*/
+@media screen and (max-width:767px){
     nav ul {
         visibility: hidden;
+        opacity: 0;
         flex-direction: column;
+        justify-content: center;
         align-items: end;
         position: fixed;
         top: 0;
         right: 0;
-        background-color: var(--akzentfarbe2);
-        background-image: linear-gradient(315deg, var(--akzentfarbe2) 50%, var(--akzentfarbe4) 80%);
+        background-image: linear-gradient(315deg, var(--akzentfarbe3) 50%, var(--akzentfarbe4) 80% );
+        border-radius: 50% 0% 0% 50%;
         height: 100%;
         margin: 0;
-        opacity: 0;
-        transition: 0.3s;
     }
     .menuicon{
         display: block;
@@ -108,74 +129,21 @@ a:hover{
         visibility: visible;
         opacity: 1;
     }
-    .open ul {
+    .open ul{
         visibility: visible;
         opacity: 1;
         transition: 0.3s ease-in;
         z-index: 9999999;
     }
     h2{
-    
         background-color: var(--akzentfarbe2);
         color: var(--akzentfarbe4);
     }
-    .footer {
+    .footer{
         display: flex;
         flex-direction: column;  
-    }
+    }    
 }
-
-.block{
-    display: block;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    
-    gap:0.2rem;
-}
-h2{
-    width: 99%;
-    padding:1rem 0rem;
-    text-align: center;
-}
-h3{
-    font-size: 1.5rem;;
-}
-.startimg{
-    width: 400px;
-    max-height: 300px;
-    border: 2px solid var(--akzentfarbe2);
-    border-radius: 50%;
-    transition: 0.3s;
-    margin: 0.5rem;
-}
-.startimg:hover{
-    border: 3px solid var(--akzentfarbe3);
-}
-@media screen and (max-width:400px)
-{
-    .startimg{
-        width: 100%;
-    }
-}
-.beitragsbild{
-    width: 600px;
-    
-    border: 2px solid var(--akzentfarbe2);
-    transition: 0.3s;
-}
-@media screen and (max-width:600px)
-{
-    .beitragsbild{
-        width: 100%;
-    }
-}
-
 
 /* footer */
 .footer {
@@ -204,7 +172,7 @@ h3{
 
 
 
-/* SortButton */
+/* Button for sort function in a table */
 .sortButton{
     background-image: url('./../images/sortIcon.png');
     background-size: contain;
@@ -213,44 +181,41 @@ h3{
     height: 1rem;
     border: 1 px solid black;
 }
-/* SortButton Ende*/
-
-
-
-
-
-
 
 /* Table with sort und search function support by 
 https://www.w3schools.com/howto/howto_js_filter_table.asp */
 
 #myInput {
-    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-image: url('./../images/Lupe.png'); /* Add a search icon to input */
+    background-size: 1.5rem;
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 50%; /* Full-width */
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
+    border: 1px solid black; /* Add a grey border */
     margin-bottom: 12px; /* Add some space below the input */
+    text-align: center;
   }
   
   #myTable {
     border-collapse: collapse; /* Collapse borders */
     width: 100%; /* Full-width */
-    border: 1px solid #ddd; /* Add a grey border */
+    border: 1px solid var(--akzentfarbe4); /* Add a grey border */
     font-size: 18px; /* Increase font-size */
-    background-color: rgba(180, 196, 182, 0.5);
+    background-color: rgba(180, 196, 182, 0.7);
   }
   
   #myTable th, #myTable td {
     text-align: left; /* Left-align text */
     padding: 12px; /* Add padding */
+    font-weight: 500;
   }
   
   #myTable tr {
     /* Add a bottom border to all table rows */
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--akzentfarbe4);
   }
   
   #myTable tr.header, #myTable tr:hover {
