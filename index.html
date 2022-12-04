@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <script src="js/jq.js"></script>
+    <script src="js/js.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+
+  <body>
+    <!-- Header -->
+    <header> 
+        <div id="header-placeholder"></div>
+            <script>$(function(){$("#header-placeholder").load("header.html");});</script>
+    </header>
+    <!-- Header Ende-->
+
+    <main>
+        <section>
+            <h2>C02-Austoß</h2>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <p><button onclick="sortTable()">Sort</button></p>
+            
+            <table id="myTable">
+                <tr>
+                  <th>Unternehmen</th>
+                  <th>Land</th>
+                  <th>C02-Austoß</th>
+                </tr>
+                <tr>
+                  <td>Berglunds snabbkop</td>
+                  <td>Sweden</td>
+                  <td>300</td>
+                </tr>
+                <tr>
+                  <td>North/South</td>
+                  <td>UK</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Germany</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Koniglich Essen</td>
+                  <td>Germany</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Italy</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Paris specialites</td>
+                  <td>France</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>UK</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Canada</td>
+                  <td>200</td>
+                </tr>
+              </table>    
+        </section>
+    </main>
+
+
+
+
+
+    <!-- Footer -->
+    <footer> 
+        <div id="footer-placeholder"></div>
+            <script>$(function(){$("#footer-placeholder").load("footer.html");});</script>
+    </footer>
+    <!-- Header Ende-->
+
+
+  
+  </body>
+</html>
