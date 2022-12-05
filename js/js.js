@@ -1,4 +1,4 @@
-function toggleNavbar(){
+function toggleNavbar(){ 
     var x = document.getElementById("myNav");
     var y = document.getElementById("myMenuIcon");
     if (x.className === "navbar") {
@@ -11,6 +11,10 @@ function toggleNavbar(){
   }
 
 
+
+/**
+Durchsuche eine Tabelle nach Worten und Wortteilen
+ */
 function searchTable() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
@@ -43,7 +47,7 @@ function searchTable() {
     }
   }
   for (i = 0; i < tr.length; i++) {
-     //search in third column
+     //search in second column, show those who match the search query, but dont hide those who dont match the search query
     td = tr[i].getElementsByTagName("td")[2];
     if (td) {
       txtValue = td.textContent || td.innerText;
@@ -55,6 +59,13 @@ function searchTable() {
 }
 
 
+
+/**
+ *Sortiert eine Spalte in einer Tabelle. Nach Abschluss der Vorgangs wird dem Sortierbutton die Funktion sortTableReverse(spalte, button) zugewiesen.
+ *
+ * @param {*} spalte
+ * @param {*} button
+ */
 function sortTable(spalte, button) {
   var table, rows, switching, i, x, y, shouldSwitch, functionName;
   table = document.getElementById("myTable");
@@ -92,6 +103,15 @@ function sortTable(spalte, button) {
   document.getElementById(button).setAttribute("onclick", functionName);
 }
 
+
+
+
+/**
+ *Sortiert eine Spalte (alphabetisch rückwärts/von groß nach klein) in einer Tabelle. Nach Abschluss der Vorgangs wird dem Sortierbutton die Funktion sortTable(spalte, button) zugewiesen.
+ *
+ * @param {*} spalte
+ * @param {*} button
+ */
 function sortTableReverse(spalte, button) {
   var table, rows, switching, i, x, y, shouldSwitch, functionName; 
   table = document.getElementById("myTable");

@@ -1,10 +1,12 @@
 /* Allgemein */
-body {
+body { 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    margin:5px;
+    margin:2rem;
     background-image: url("./../images/tree.png");
     background-size:cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 p, article{
     margin-left: 2rem;
@@ -30,21 +32,11 @@ a:hover{
     justify-self: center;
     width: 100%;
 }
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    gap:0.2rem;
-}
 h2{
     width: 99%;
     padding:1rem 0rem;
     text-align: center;
 }
-
 
 /* set Design-colors for website */
 :root{
@@ -56,7 +48,7 @@ h2{
 }
 
 /* Header-elements*/
-.unternehmen {
+.unternehmen {         /* Logo + Name */
     display: flex;
     align-items: center;
     width: 100%;
@@ -70,7 +62,7 @@ h2{
     text-decoration: none;
     color: var(--akzentfarbe2);
 }
-.menuicon{
+.menuicon{          /* Menüburger nur sichtbar,falls Bildschirm < 767px */
     width: 1.5rem;
     position: fixed;
     top: 2rem;
@@ -102,14 +94,14 @@ nav li{
 nav li a{
     text-decoration: none;
     color: var(--akzentfarbe4);
-    font-weight: bold;
+    font-weight: ;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Responsive Website*/
 @media screen and (max-width:767px){
-    nav ul {
+    nav ul {                    /* Navigation an der rechten Seite unsichtbar machen */
         visibility: hidden;
         opacity: 0;
         flex-direction: column;
@@ -123,23 +115,23 @@ nav li a{
         height: 100%;
         margin: 0;
     }
-    .menuicon{
+    .menuicon{              /* Menüburger sichtbar machen */
         display: block;
         transition: 0.3s;
         visibility: visible;
         opacity: 1;
     }
-    .open ul{
+    .open ul{               /* bei anklicken des Menüburgers die Navigation sichtbar machen */
         visibility: visible;
         opacity: 1;
         transition: 0.3s ease-in;
         z-index: 9999999;
     }
-    h2{
+    h2{                     /* h2 unterteilt semantische Abschnitte auf kleinen Geräten deutlicher  */
         background-color: var(--akzentfarbe2);
         color: var(--akzentfarbe4);
     }
-    .footer{
+    .footer{                /* Footersections werden untereinander angezeigt */
         display: flex;
         flex-direction: column;  
     }    
@@ -164,15 +156,14 @@ nav li a{
     color: var(--akzentfarbe4);
     font-size: 0.8rem;
     transition: 0.2s ease-in;
+    margin: 0;
 }
 .footersection a:hover{
         color: var(--akzentfarbe1);
 }
 /* Footer Ende */
 
-
-
-/* Button for sort function in a table */
+/* Button for sort function in a table with icon */
 .sortButton{
     background-image: url('./../images/sortIcon.png');
     background-size: contain;
@@ -182,7 +173,7 @@ nav li a{
     border: 1 px solid black;
 }
 
-/* Table with sort und search function support by 
+/* Table with sort und search function support based on
 https://www.w3schools.com/howto/howto_js_filter_table.asp */
 
 #myInput {
