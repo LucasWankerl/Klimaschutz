@@ -94,7 +94,6 @@ nav li{
 nav li a{
     text-decoration: none;
     color: var(--akzentfarbe4);
-    font-weight: ;
     padding: 1rem;
     font-size: 1.3rem;
 }
@@ -196,6 +195,7 @@ https://www.w3schools.com/howto/howto_js_filter_table.asp */
     border: 1px solid var(--akzentfarbe4); /* Add a grey border */
     font-size: 18px; /* Increase font-size */
     background-color: rgba(180, 196, 182, 0.7);
+    overflow-y: scroll;
   }
   
   #myTable th, #myTable td {

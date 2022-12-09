@@ -1,15 +1,14 @@
 function toggleNavbar(){ 
-    var x = document.getElementById("myNav");
-    var y = document.getElementById("myMenuIcon");
-    if (x.className === "navbar") {
-      x.className += " open";
-      y.src ="images/Kreuz.png";
+    var navi = document.getElementById("myNav");
+    var icon = document.getElementById("myMenuIcon");
+    if (navi.className === "navbar") {
+      navi.className += " open";
+      icon.src ="images/Kreuz.png";
     } else {
-      x.className = "navbar";
-      y.src="images/icon.png";
+      navi.className = "navbar";
+      icon.src="images/icon.png";
     }
   }
-
 
 
 /**
