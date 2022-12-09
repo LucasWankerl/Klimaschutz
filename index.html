@@ -32,7 +32,7 @@
           <div class="center"> <!-- Suchfeld um die nachfolgende Tabelle zu durchsuchen-->
             <input class="tableSearch" type="text" id="myInput" onkeyup="searchTable()" placeholder="Search Table">
           </div>
-
+          <div style="overflow-x:auto;">
           <table id="myTable">
                 <tr class="header">
                   <th>Unternehmen <button class="sortButton" id="myButton1" onclick="sortTable(0, 'myButton1')"></button></th>
@@ -89,7 +89,8 @@
                   <td>Deutschland</td>
                   <td>120280</td>
                 </tr>
-           </table>    
+           </table> 
+          </div>   
       </section>
     </main>
 
